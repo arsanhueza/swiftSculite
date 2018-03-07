@@ -117,7 +117,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
             .appendingPathComponent("HeroesDatabase.sqlite")
         
-        
         if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
             print("error opening database")
         }
@@ -128,7 +127,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         readValues()
-        sqlite3_exec(<#T##OpaquePointer!#>, <#T##sql: UnsafePointer<Int8>!##UnsafePointer<Int8>!#>, <#T##callback: ((UnsafeMutableRawPointer?, Int32, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?) -> Int32)!##((UnsafeMutableRawPointer?, Int32, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?) -> Int32)!##(UnsafeMutableRawPointer?, Int32, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?, UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?) -> Int32#>, <#T##UnsafeMutableRawPointer!#>, <#T##errmsg: UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>!##UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>!#>)
+//        sqlite3_exec(<#T##OpaquePointer!#>, <#T##sql: UnsafePointer<Int8>!##UnsafePointer<Int8>!#>, { (<#UnsafeMutableRawPointer?#>, <#Int32#>, <#UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?#>, <#UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>?#>) -> Int32 in
+//            <#code#>
+//        }, <#T##UnsafeMutableRawPointer!#>, <#T##errmsg: UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>!##UnsafeMutablePointer<UnsafeMutablePointer<Int8>?>!#>)
     }
 }
 
